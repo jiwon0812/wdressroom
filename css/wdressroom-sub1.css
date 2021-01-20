@@ -1,0 +1,154 @@
+@charset "unf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+#wrap {
+       width: 100%;
+       margin: 0 auto;
+ }
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: "Helvetica";
+  text-align: center;
+}
+
+
+/* header */
+#header{
+    max-width: 1200px; margin: 0 auto;
+}
+#header .munu .img{
+    max-width: 1200px;
+    width: 100%;
+}
+#header .menu img {
+    _vertical-align: middle;
+    float: left;
+    
+}
+#header .menu {
+  width: 100%;
+  float: right;
+  list-style: none;
+  text-align: center;
+}
+
+
+#header .menu ul {
+    float: right;
+}
+#header .menu ul li{
+    
+    float: left;
+    margin-left: 25px;
+}
+#header .menu ul li a{
+    font-weight: bold;
+    float: right; padding: 10px; height: 30px;
+}
+
+
+
+
+#header .menu li a {
+  color: #545454;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: bold;
+    float: right;
+}
+
+#header .menu_list {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+#header .menu_list ul {
+    float: right;
+    margin-left: 13px;
+}
+
+#header .menu_list ul li{
+    float: left;
+}
+#header .menu_list ul li a{
+    float: right; padding: 10px; height: 30px;
+}
+
+
+
+/* products */
+.products h3 {
+
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+  font-size: 24px;
+  color: #545454;
+  margin-top:60px;
+  margin-bottom: 60px;
+
+}
+.products .product-list{
+  max-width: 1200px;
+  margin: 0 auto; 
+  height: 1000px;
+}
+
+/*img사이즈 320*330*/
+.product {
+  max-width: 1200px;
+  width: 320px;
+  text-align: center;
+  display: block;
+  color:#545454;
+  text-decoration: none;
+  float: left;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 80px;
+}
+.product-name{
+  max-width: 1200px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.clearfix{
+  clear: both;
+}
+.products2 {
+    max-width: 1200px; margin: 0 auto;
+    margin-bottom: 300px;
+}
+.products2 ul {
+    float: left;
+    margin-left: 470px;
+    
+}
+.products2 ul li {
+    width: 100px; height: 40px; line-height: 40px;
+    float: left;
+    border: 1px solid #111;
+    transition: all 0.7s;
+    
+    
+}
+.products2 ul li:nth-child(2){
+    margin-left: 50px;
+}
+.products2 ul li:hover {
+    background: #111;
+}
+.products2 ul li:hover a{
+    background: #111;
+    color: #fff;
+}
+.products2 ul li a {
+   
+}
+

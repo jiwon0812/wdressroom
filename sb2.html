@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wdressroom-sub1</title>
+       <link rel="stylesheet" href="css/reset.css">
+       <link rel="stylesheet" href="css/wdressroom-sub2.css">
+        <script src="https://kit.fontawesome.com/3cc7440731.js" crossorigin="anonymous"></script>
+        <script src="js/jquery-3.5.1.min.js"> </script>
+        <script src="js/jquery-migrate-1.4.1.min.js"> </script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.mousewheel.min.js"></script>
+        <script>
+        $(document).ready(function(){
+           $('#footer').load('footer.html');
+        });
+       </script>
+
+</head>
+<body>
+<!--     header-->
+      <div id="header">
+      <div class="menu">
+              <a href="index.html"><img src="images/sub1/sb1.logo.png" alt=""></a>
+               <ul>
+                   <li><a href="login.html">Log</a></li> 
+                   <li><a href="join.html">Join</a></li> 
+               </ul>
+           </div>
+    </div> 
+    
+<!--products-->
+  <div class="products">
+    <div class="products">
+    <h3>페브클린</h3>
+    
+    <div class="product-list">
+      <a href="#"class="product">
+        <img src="images/sb2/sb2-1.JPG" >
+        <div class="product-name"> 페브클린 No.97 에이프릴코튼 500ml </div>
+        <div class="product-price">6,300원</div>
+      </a>
+
+    <a href="#"class="product">
+      <img src="images/sb2/sb2-2.png" >
+      <div class="product-name">페브클린 No.49 피치블러썸 500ml</div>
+      <div class="product-price">6,300원</div>
+      </a>
+    
+    <a href="#"class="product">
+      <img src="images/sb2/sb2-3.jpg" >
+      <div class="product-name">페브클린 500ml 모음전</div>
+      <div class="product-price">5,900원</div>
+      </a>
+      
+    <a href="#"class="product">
+      <img src="images/sb2/sb2-4.png" >
+      <div class="product-name">페브클린 No.45 모닝레인 500ml</div>
+      <div class="product-price">6,300원</div>
+      </a>
+      
+    <a href="#"class="product">
+      <img src="images/sb2/sb2-5.png">
+      <div class="product-name">페브클린 섬유탈취제 No.30 베이비그린티 500ml </div>
+      <div class="product-price">6,300원</div>
+      </a>
+    </div>
+    
+    
+        </div>
+    </div>
+
+<!--products2-->
+<div class="products2">
+    <ul>
+        <li><a href="#">1</a></li>
+    </ul>
+    
+</div>
+
+   <script>
+     $(document).ready(function(){
+        $(".products .product-list").hide();
+        $(".products2>ul>li").eq(0).addClass("selected");
+        $(".products .product-list").eq(0).show();
+        
+        $(".products2>ul>li>a").click(function(){
+//            e.preventDefault();
+            $(this).removeClass();
+            $(this).addClass("selected");
+            $(".products .product-list").hide();
+            var i = $(this).parent().index();
+            $(".products .product-list").eq(i).show();
+        });
+
+    });
+    </script>
+
+
+<!--  footer -->
+   <div id="footer"> </div> 
+
+
+</body>
+</html>

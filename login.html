@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+     <link rel="stylesheet" href="css/reset.css">
+     <link rel="stylesheet" href="css/wdressroom-login.css">
+     <script src="https://kit.fontawesome.com/3cc7440731.js" crossorigin="anonymous"></script>
+     <script src="js/jquery-3.5.1.min.js"> </script>
+     <script src="js/jquery-migrate-1.4.1.min.js"> </script>
+     <script src="js/jquery.easing.1.3.js"></script>
+     <script src="js/jquery.mousewheel.min.js"></script>
+     <script>
+        $(document).ready(function(){
+           $('#header').load('header.html');
+           $('#nav').load('nav.html');
+           $('#footer').load('footer.html');
+        });
+     </script>
+</head>
+<body>
+    <!--      header  -->
+       <div id="header"> </div>
+       
+<!--       nav  -->
+ 
+  <div id="nav"> </div>
+<!--  login-->
+        <div id="login">
+            <div class="login">
+                <h1>LOGIN</h1>
+                <p>WELCOM BACK</p>
+                <form action="#" method="post">
+                    <div class="id">
+                        <li>ID</li>
+                        <input type="text" 
+                        placeholder="아이디">
+                    </div>
+                    <div class="pwd">
+                        <li>PASSWORD</li>
+                        <input type="password" 
+                        placeholder="패스워드">
+                    </div>
+                    <div class="check">
+                    <label for="check">
+                        <input type="checkbox" id="check"> 
+                        아이디 저장
+                    </label>
+                    </div> 
+                    <div class="btn">
+                        <li>
+                        <a href="#">로그인</a>
+                        </li>
+                    </div>
+                    <div class="join">
+                        <li>
+                        <a href="join.html">회원가입</a>
+                        </li>
+                    </div>
+                </form>
+            </div>
+        </div>
+<!--        footer-->
+<div id="footer"> </div>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+@charset "unf-8";
+*{
+    box-sizing: border-box;
+}
+
+#wrap {width: 100%;margin: 0 auto;}
+/*header*/
+#header {
+    max-width: 1920px; margin: 0 auto;
+}
+#header .menu {
+   width: 100%;
+}
+#header .menu ul {
+    float: right;
+}
+#header .menu ul li{
+    float: left;
+    margin-left: 25px;
+}
+#header .menu ul li a{
+    float: right; padding: 10px; height: 30px;
+}
+
+/*nav*/
+#nav {
+    max-width: 1920px; margin: 0 auto;height: 85px; line-height: 50px;}
+#nav .nav_log{ 
+    padding-top: 40px; padding-bottom: 40px; text-align: center; 
+     
+}
+
+#nav .nav_sub ul li {
+        width: 310px;
+        float: left; 
+        text-align: center;
+        position: relative;
+        z-index: 1; 
+     
+}
+#nav .nav_sub ul li a {color: #777; text-align: center; }
+#nav .nav_sub>ul>li:nth-child(3) a {
+    color: skyblue;
+}
+#nav .nav_sub>ul>li:nth-child(3) .nav_sub1 a{color: #777;}
+#nav .nav_sub>ul>li:nth-child(4) a {
+    color: hotpink;
+}
+#nav .nav_sub>ul>li:nth-child(4) .nav_sub1 a{color: #777;}
+#nav .nav_sub ul li:hover .nav_sub1{
+    opacity: 0.5;
+    display: block;
+}
+#nav ul li:hover .nav_sub li a{color: #111; }
+
+#nav ul li .nav_sub1{
+    display: none; z-index: 1;
+    position: absolute;
+}
+#nav_sub li {width: 100%; background: #eee;}
+#nav ul li .nav_sub1 li:hover { background: #111;
+    
+}
+#nav ul li .nav_sub1 li:hover a{ color: #fff;
+    
+}
+
+/*login*/
+#login {
+    margin-top: 400px;
+    margin-bottom: 250px;
+}
+#login .login {max-width: 1200px; text-align: center; margin: 0 auto;}
+#login .login h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    
+}
+#login > .login > h1:after {
+            position: absolute; left: 0; right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            content: '';
+            display: block;
+            width: 140px;
+            height: 5px;
+            background: hotpink;
+        }
+#login .login p {
+    font-size: 16px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+#login .login .id {width: 100%; margin-bottom: 20px;}
+#login .login .id li {
+    width: 50%; text-align: left;
+    font-size: 14px; margin-bottom: 10px;
+   margin: 0 auto;
+}
+#login .login .id input[type="text"] {
+    width: 50%; height: 60px;
+    background: #fff; border: 1px solid #111;
+    text-indent: 10px;
+    font-size: 16px;
+}
+#login .login .pwd {width: 100%; margin-bottom:60px;}
+#login .login .pwd li {
+    width: 50%; text-align: left;
+    font-size: 14px; margin-bottom: 10px;
+    margin: 0 auto;
+}
+#login .login .pwd input[type="password"] {
+    width: 50%; height: 60px;
+    background: #fff; border: 1px solid #111;
+    text-indent: 10px;
+    font-size: 16px;
+    font-size: 16px;
+}
+#login .login .check {
+   width: 50%;
+   margin: 0 auto;
+   text-align: left;
+   padding-bottom: 60px;
+    
+}
+#login .login .check label {
+    font-size: 18px; 
+    cursor: pointer;
+    
+}
+#login .login .check label input[type="checkbox"] {
+    width: 40px; height: 20px; 
+    border-radius: 10px;
+}
+
+#login .btn { margin-bottom: 20px;}
+#login .btn li {
+    background: #888; width: 50%;
+    height: 80px; line-height: 80px; 
+    text-align: center;
+    transition: all 0.8s;
+    cursor: pointer;
+    margin: 0 auto;
+}
+#login .btn li:hover {
+    background: #fff;
+    border: 1px solid hotpink;
+}
+#login .btn li:hover a {
+    color: #000;
+}
+#login .btn li a {font-size: 20px; color: #fff;}
+
+#login .join {width: 100%;}
+#login .join li {margin-top: 60px;}
+
+
+/*footer*/
+#footer{
+    margin-top: 100px;
+    height: 200px;
+}
+#footer .outer {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+#footer .outer .img{
+    float: left;
+    
+}
+#footer .outer p{
+    font-size: 13px;
+    float: right;
+    padding-top: 10px;
+    line-height: 1.5;
+    
+}
+#footer .outer1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 220px;
+}
+#footer .boder {
+    width: 100%;
+    height: 5px;
+    background: #111;
+}
+#footer .boder1 {
+    width: 100%;
+    height: 100px;
+    background: #111;
+}
+
+#footer .outer1 .outer_1 {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 13px;
+    line-height: 2;
+}
+#footer .outer1 .outer_2 {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-left: 80px;
+}
+#footer .outer1 .outer_3 {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 13px;
+    line-height: 1.5;
+    padding-left: 80px;
+  
+}
