@@ -1,0 +1,270 @@
+@charset "unf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+#wrap {
+       width: 100%;
+       margin: 0 auto;
+ }
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: "Helvetica";
+  text-align: center;
+}
+/* header */
+#header{
+    max-width: 1200px; margin: 0 auto;
+}
+
+#header .menu img {
+    _vertical-align: middle;
+    float: left;
+    margin-bottom: 100px;
+    
+}
+#header .menu {
+  width: 100%; height: 100px;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+
+#header .menu ul {
+    float: right;
+}
+#header .menu ul li{
+    
+    float: left;
+    margin-left: 25px;
+}
+#header .menu ul li a{
+    font-weight: bold;
+    float: right; padding: 10px; height: 30px;
+}
+
+
+
+
+#header .menu li a {
+  color: #545454;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: bold;
+    float: right;
+}
+
+#header .menu_list {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+#header .menu_list ul {
+    float: right;
+    margin-left: 13px;
+}
+
+#header .menu_list ul li{
+    float: left;
+}
+#header .menu_list ul li a{
+    float: right; padding: 10px; height: 30px;
+}
+
+#content {
+    max-width: 1200px; margin: 0 auto;
+    
+}
+
+
+
+#content h3 {
+    
+    
+     text-align: center; 
+     font-size: 25px;
+        }
+        div.table_layout {
+            width: 90%; margin: 0 auto;
+        }
+        div.table_layout ul {
+            display: none;
+        }
+        div.table_layout ul.list {
+            display: table;
+            width: 100%;
+        }
+        div.table_layout ul.list > li {
+            display: table-row;
+        }
+        div.table_layout ul.list > li > div {
+            display: table-cell;
+            vertical-align: center;
+            text-align: center;
+            padding: 5px;
+        }
+        .table_layout .table_th > div {
+            border-top: 3px solid #0e71b8;
+            border-bottom: 1px solid #e0e0e0;
+            font-weight: bold;
+        }
+        .table_layout .table_tr > div {
+            height: 50px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .table_tr .subject {
+            text-align: left !important;
+        }
+        .table_tr:hover {background: #fbfbfb;}
+        
+        .pagenation {
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 20%;
+        }
+        .pagenation img {
+            display: inline-block;
+            width: auto;
+        }
+        .pagenation .page_wrap {
+            width: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .pagenation a {
+            display: block;
+            float: left;
+            width: 40px; height: 40px;
+            line-height: 40px;
+            border: 1px solid #e6e6e6;
+            text-align: center;
+            margin: 0 5px;
+        }
+        .pagenation a img {padding-top: 15px;}
+        .pagenation a:hover {background: #e6e6e6;}
+        .pagenation a.active {background: #e6e6e6;}
+        
+        
+        #bottom_wrap {
+            width: 90%;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+        .btn_wrap {
+            width: 30%;
+            float: right;
+            text-align: right;
+        }
+        #bo_sch {
+            position: relative;
+            max-width: 400px;
+            width: 70%;
+            float: left;
+            border: 3px solid #ddd;
+            border-radius: 5px;
+        }
+        .btn_wrap .btn {
+            width: 120px;
+            height: 42px;
+            font-size: 16px;
+            border: none;
+            background: #0e71b8;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        #bo_sch legend {
+            text-indent: -9999px;
+            font-size: 0;
+        }
+        #bo_sch select {
+            width: 90px; height: 37px;
+            border: 0;
+            border-right: 1px solid #ddd;
+            font-size: 14px;
+        }
+        #bo_sch label.sound_only {
+            font-size: 0;
+        }
+        #bo_sch .sch_input {
+            height: 37px;
+            border: 0;
+            width: 60%;
+            padding: 0 40px 0 20px;
+        }
+        #bo_sch .sch_btn {
+            position: absolute;
+            top: 0; right: 0;
+            background: #fff;
+            height: 37px;
+            width: 40px;
+            color: #0e71b8;
+            border: 0;
+        }
+        
+/*        미디어 쿼리       */
+        @media screen and (max-width:600px) {
+            body {font-size: 14px;}
+            h3 {
+                font-size: 20px; margin-top: 0;
+            }
+            ul.list > li > div {
+                display: block;
+            }
+            div.table_layout ul li {
+                display: block;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            div.table_layout ul li div {
+                display: block;
+            }
+            .num.dpnone, .date.dpnone, .count.dpnone {
+                display: none !important;
+            }
+            .table_tr:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .table_tr > div {border-bottom: none;}
+            .num {width: 10%; background: #ccc;}
+            .subject {width: 60%;}
+            .table_layout .table_th > div {
+                height: 50px;
+                border: none;
+                border-top: 3px solid #0e71b8;
+                border-bottom: 1px solid #e0e0e0;
+                font-size: 14px;
+            }
+            .table_layout .table_tr > div {
+                height: 30px;
+                border: none;
+            }
+            .subject, .num, .date, .count {float: left;}
+            .subject {
+                word-wrap: normal;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .btn_wrap {
+                width: 100%;
+                margin-bottom: 20px;
+                padding-right: 180px;
+            }
+            #bo_sch {
+                width: 100%;
+                max-width: 100%;
+            }
+            .btn_wrap .btn {
+                width: 92px;
+                height: 32px;
+                font-size: 12px;
+            }
+        }
+

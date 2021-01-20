@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>제주플레이스</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/33333.css">
+  <link rel="stylesheet" href="css/fullpage.min.css">
+  <script src="js/fullpage.min.js"></script>
+  <script src="js/fullpage.min.js"></script>
+ <script src="js/jquery-3.5.1.min.js"></script>
+ <script src="js/jquery.easing.1.3.js"></script>
+ <script src="js/jquery.mousewheel.min.js"></script>
+ <script src=""></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="fullpage">
+		<div class='quick'><ul></ul></div>
+<!--		full1-->
+		<div class="fullsection full1" pageNum="1">
+		    <div class="img">
+		        <img src="images/logo.png" alt="">
+		    </div>
+		    <ul class="nav">
+		     
+		     <li><a href="#">제주플레이스소개</a>
+		         <ul class="nav_sub">
+		             <li><a href="#">소개</a></li>
+		         </ul>
+		     </li>
+		     <li><a href="#">객실안내</a>
+		         <ul class="nav_sub">
+		             <li><a href="#">이용안내</a></li>
+		             <li><a href="#">1.5룸</a></li>
+		             <li><a href="#">원룸 통창형</a></li>
+		             <li><a href="#">원룸 일반창형</a></li>
+		         </ul>
+		     </li>
+		     <li><a href="#">올드제주카페</a>
+		         <ul class="nav_sub">
+		             <li><a href="#">카페</a></li>
+		         </ul>
+		     </li>
+		     <li><a href="#">주변볼거리</a>
+		         <ul class="nav_sub">
+		             <li><a href="#">여행지</a></li>
+		         </ul>
+		     </li>
+		     <li><a href="#">이벤트</a>
+		         <ul class="nav_sub">
+		             <li><a href="#">이벤트</a></li>
+		         </ul>
+		     </li>
+		    </ul>
+		    <div class="img2">
+		        <img src="images/header1.png" alt="슬라이드1">
+		    </div>
+		</div>
+		<!--		full1 종료지점-->
+		<!--		full2 시작-->
+		<div class="fullsection full2" pageNum="2">
+            <div class="content">
+              <br>
+               <div class="boder"></div>
+               <h1>Enjoy</h1>
+                <p>제주플레이스에서 우리 힐링할래요?</p>
+                    <div id="circle1">
+                        </div>
+
+                    <div id="circle2">
+                        
+                        </div>
+                        <br>
+                    <div id="circle3">
+             
+                    </div>
+                        <br>
+                    <div id="circle4">
+
+                    </div>
+              </div>
+		</div>
+		<!--		full2 종료지점-->
+        <!--		full3 시작-->
+		<div class="fullsection full3" pageNum="3">
+		    <div class="content1">
+                <div class="boder"></div>
+                <h1>Stay</h1>
+                    <p>2018년 4월 오픈한 신축건물입니다. <br>
+                    옥상에서 서우봉, 바닷가,다려도, 한라산 뷰를 만날 수 있습니다.</p>
+                    <br>
+                    <p>체크인 16:00~21:00 체크아웃 11:00</p>
+                    <div class="content1_slide1">
+                        <ul class="pane1">
+                            <li><img src="images/content1_img1.png" alt=""></li>
+                            <li><img src="images/content1_img2.png" alt=""></li>
+                            <li><img src="images/content1_img3.png" alt=""></li>
+                        </ul>
+<!--
+                        <ul class="btn">
+                            <li class="on">버튼1</li>
+                            <li>버튼2</li>
+                            <li>버튼3</li>
+                        </ul>
+-->
+            
+                    </div>
+            </div>
+		</div>
+		<div class="fullsection full4" pageNum="4"><span>4 PAGE</span></div>
+		<div class="fullsection full5" pageNum="5"><span>5 PAGE</span></div>
+	</div>
+	        <!--		full3 종료지점-->
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script>
+$(document).ready(function(){
+	fullset();
+	quickClick();
+});
+function fullset(){
+	var pageindex = $("#fullpage > .fullsection").size(); //fullpage 안에 섹션이(.fullsection) 몇개인지 확인하기
+	for(var i=1;i<=pageindex;i++){
+		$("#fullpage > .quick > ul").append("<li></li>");
+	}
+	$("#fullpage .quick ul :first-child").addClass("on"); //일단 화면이 로드 되었을때는 퀵버튼에 1번째에 불이 들어오게
+	//마우스 휠 이벤트
+	$(window).bind("mousewheel", function(event){
+		var page = $(".quick ul li.on");
+		//alert(page.index()+1);  // 현재 on 되어있는 페이지 번호
+		if($("body").find("#fullpage:animated").length >= 1) return false;
+		//마우스 휠을 위로
+		if(event.originalEvent.wheelDelta >= 0) {
+			var before=page.index();
+			if(page.index() >= 0) page.prev().addClass("on").siblings(".on").removeClass("on");//퀵버튼옮기기
+			var pagelength=0;
+			for(var i=1; i<(before); i++)
+			{
+				pagelength += $(".full"+i).height();
+			}
+			if(page.index() > 0){ //첫번째 페이지가 아닐때 (index는 0부터 시작임)
+				page=page.index()-1;
+				$("#fullpage").animate({"top": -pagelength + "px"},1000, "swing");
+			}else{
+				alert("첫번째페이지 입니다.");
+			}	
+		}else{ // 마우스 휠을 아래로	
+			var nextPage=parseInt(page.index()+1); //다음페이지번호
+			var lastPageNum=parseInt($(".quick ul li").size()); //마지막 페이지번호
+			//현재페이지번호 <= (마지막 페이지 번호 - 1)
+			//이럴때 퀵버튼옮기기
+			if(page.index() <= $(".quick ul li").size()-1){ 
+				page.next().addClass("on").siblings(".on").removeClass("on");
+			}
+			
+			if(nextPage < lastPageNum){ //마지막 페이지가 아닐때만 animate !
+				var pagelength=0;
+				for(var i = 1; i<(nextPage+1); i++){ 
+					//총 페이지 길이 구하기
+					//ex) 현재 1번페이지에서 2번페이지로 내려갈때는 1번페이지 길이 + 2번페이지 길이가 더해짐
+					pagelength += $(".full"+i).height();
+				}
+				$("#fullpage").animate({"top": -pagelength + "px"},1000, "swing");
+			}
+			else{ // 현재 마지막 페이지 일때는
+				alert("마지막 페이지 입니다!");
+			};		
+			
+		}
+	});
+	$(window).resize(function(){ 
+		//페이지가 100%이기때문에 브라우저가 resize 될때마다 스크롤 위치가 그대로 남아있는것을 방지하기 위해
+		var resizeindex = $(".quick ul li.on").index()+1;
+		
+		var pagelength=0;
+		for(var i = 1; i<resizeindex; i++){ 
+			//총 페이지 길이 구하기
+			//ex) 현재 1번페이지에서 2번페이지로 내려갈때는 1번페이지 길이 + 2번페이지 길이가 더해짐
+			pagelength += $(".full"+i).height();
+		}
+
+		$("#fullpage").animate({"top": -pagelength + "px"},0);
+	});
+}
+// 사이드 퀵버튼 클릭 이동
+function quickClick(){
+	$(".quick li").click(function(){
+		var gnbindex = $(this).index()+1;
+		var length=0;
+		for(var i=1; i<(gnbindex); i++)
+		{
+			length+=$(".full"+i).height();
+		}
+		if($("body").find("#fullpage:animated").length >= 1) return false;
+		$(this).addClass("on").siblings("li").removeClass("on");
+		
+		$("#fullpage").animate({"top": -length + "px"},800, "swing");
+		return false;
+	});
+}
+
+</script>
+
+</html>
